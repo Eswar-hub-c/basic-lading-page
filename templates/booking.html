@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: rgb(2, 20, 36);
+        }
+        .booking-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .booking-container label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .booking-container input,
+        .booking-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .booking-container button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #02a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .booking-container button:hover {
+            background-color: #017;
+        }
+    </style>
+
+    <div class="booking-container">
+        <h1>Book a Meeting</h1>
+        <form action="{{ url_for('booking') }}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+{% endblock %}
