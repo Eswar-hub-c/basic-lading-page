@@ -35,7 +35,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/web-development-freelancer.git
+   git clone https://github.com/Eswar-hub-c/basic-lading-page.git
    ```
 
 2. **Navigate into the project directory**:
